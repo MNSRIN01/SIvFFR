@@ -46,3 +46,8 @@ BaselineResults = table(genMetrics.Gen1, genMetrics.Gen2, genMetrics.Gen3, ...
 % Display result
 disp('=== Baseline Frequency Performance Table ===');
 disp(BaselineResults);
+
+filename = 'FSIIncreasedGain200.xlsx';
+writetable(BaselineResults, filename, 'WriteRowNames', true);
+
+disp(['Baseline results exported to: ', filename]);
